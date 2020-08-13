@@ -1,0 +1,219 @@
+{
+    "current": {
+        "dependencies": [
+            {
+                "group": "backport-util-concurrent",
+                "version": "3.1",
+                "projectUrl": "http://backport-jsr166.sourceforge.net/",
+                "name": "backport-util-concurrent"
+            },
+            {
+                "group": "backport-util-concurrent",
+                "version": "3.1",
+                "projectUrl": "http://backport-jsr166.sourceforge.net/",
+                "name": "backport-util-concurrent-java12"
+            },
+            {
+                "group": "com.github.ben-manes.versions",
+                "version": "0.28.0",
+                "projectUrl": null,
+                "name": "com.github.ben-manes.versions.gradle.plugin"
+            },
+            {
+                "group": "com.google.code.gson",
+                "version": "none",
+                "projectUrl": "https://github.com/google/gson",
+                "name": "gson"
+            },
+            {
+                "group": "com.linecorp.armeria",
+                "version": "none",
+                "projectUrl": "https://line.github.io/armeria/",
+                "name": "armeria"
+            },
+            {
+                "group": "dom4j",
+                "version": "none",
+                "projectUrl": "http://dom4j.org",
+                "name": "dom4j"
+            },
+            {
+                "group": "io.zipkin.brave",
+                "version": "none",
+                "projectUrl": "https://github.com/openzipkin/brave",
+                "name": "brave"
+            }
+        ],
+        "count": 7
+    },
+    "gradle": {
+        "current": {
+            "version": "6.3",
+            "reason": "",
+            "isUpdateAvailable": true,
+            "isFailure": false
+        },
+        "nightly": {
+            "version": "",
+            "reason": "update check disabled",
+            "isUpdateAvailable": false,
+            "isFailure": false
+        },
+        "enabled": true,
+        "releaseCandidate": {
+            "version": "6.4-rc-2",
+            "reason": "",
+            "isUpdateAvailable": true,
+            "isFailure": false
+        },
+        "running": {
+            "version": "5.6.4",
+            "reason": "",
+            "isUpdateAvailable": false,
+            "isFailure": false
+        }
+    },
+    "exceeded": {
+        "dependencies": [
+            {
+                "group": "com.google.guava",
+                "latest": "28.2-jre",
+                "version": "99.0-SNAPSHOT",
+                "projectUrl": "https://github.com/google/guava",
+                "name": "guava"
+            },
+            {
+                "group": "com.google.guava",
+                "latest": "23.3-jre",
+                "version": "99.0-SNAPSHOT",
+                "projectUrl": "https://github.com/google/guava",
+                "name": "guava-tests"
+            }
+        ],
+        "count": 2
+    },
+    "outdated": {
+        "dependencies": [
+            {
+                "group": "com.google.guava",
+                "available": {
+                    "release": null,
+                    "milestone": "28.2-jre",
+                    "integration": null
+                },
+                "version": "16.0-rc1",
+                "projectUrl": "https://github.com/google/guava",
+                "name": "guava"
+            },
+            {
+                "group": "com.google.inject",
+                "available": {
+                    "release": null,
+                    "milestone": "4.2.3",
+                    "integration": null
+                },
+                "version": "2.0",
+                "projectUrl": "https://github.com/google/guice",
+                "name": "guice"
+            },
+            {
+                "group": "com.google.inject.extensions",
+                "available": {
+                    "release": null,
+                    "milestone": "4.2.3",
+                    "integration": null
+                },
+                "version": "2.0",
+                "projectUrl": "https://github.com/google/guice",
+                "name": "guice-multibindings"
+            },
+            {
+                "group": "org.gradle.kotlin.kotlin-dsl",
+                "available": {
+                    "release": null,
+                    "milestone": "1.3.6",
+                    "integration": null
+                },
+                "version": "1.2.9",
+                "projectUrl": null,
+                "name": "org.gradle.kotlin.kotlin-dsl.gradle.plugin"
+            },
+            {
+                "group": "org.jetbrains.kotlin",
+                "available": {
+                    "release": null,
+                    "milestone": "1.3.71",
+                    "integration": null
+                },
+                "version": "1.3.41",
+                "projectUrl": "https://kotlinlang.org/",
+                "name": "kotlin-reflect"
+            },
+            {
+                "group": "org.jetbrains.kotlin",
+                "available": {
+                    "release": null,
+                    "milestone": "1.3.71",
+                    "integration": null
+                },
+                "version": "1.3.41",
+                "projectUrl": "https://kotlinlang.org/",
+                "name": "kotlin-sam-with-receiver"
+            },
+            {
+                "group": "org.jetbrains.kotlin",
+                "available": {
+                    "release": null,
+                    "milestone": "1.3.71",
+                    "integration": null
+                },
+                "version": "1.3.41",
+                "projectUrl": "https://kotlinlang.org/",
+                "name": "kotlin-scripting-compiler-embeddable"
+            },
+            {
+                "group": "org.jetbrains.kotlin",
+                "available": {
+                    "release": null,
+                    "milestone": "1.3.71",
+                    "integration": null
+                },
+                "version": "1.3.41",
+                "projectUrl": "https://kotlinlang.org/",
+                "name": "kotlin-stdlib-jdk8"
+            },
+            {
+                "group": "org.springframework.boot",
+                "available": {
+                    "release": null,
+                    "milestone": "2.2.6.RELEASE",
+                    "integration": null
+                },
+                "version": "1.5.8.RELEASE",
+                "projectUrl": "https://projects.spring.io/spring-boot/#",
+                "name": "spring-boot-dependencies"
+            }
+        ],
+        "count": 9
+    },
+    "unresolved": {
+        "dependencies": [
+            {
+                "group": "com.github.ben-manes",
+                "version": "1.0",
+                "reason": "org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find any matches for com.github.ben-manes:unresolvable:+ as no versions of com.github.ben-manes:unresolvable are available.\r\nSearched in the following locations:\r\n  - file:/C:/Users/Przemek/.gradle/caches/5.6.4/embedded-kotlin-repo-1.3.41-3/repo/com/github/ben-manes/unresolvable/\r\n  - https://jcenter.bintray.com/com/github/ben-manes/unresolvable/maven-metadata.xml\r\n  - https://jcenter.bintray.com/com/github/ben-manes/unresolvable/\r\n  - file:/C:/Users/Przemek/.m2/repository/com/github/ben-manes/unresolvable/maven-metadata.xml\r\n  - file:/C:/Users/Przemek/.m2/repository/com/github/ben-manes/unresolvable/\r\nRequired by:\r\n    project :\r\n",
+                "projectUrl": null,
+                "name": "unresolvable"
+            },
+            {
+                "group": "com.github.ben-manes",
+                "version": "1.0",
+                "reason": "org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find any matches for com.github.ben-manes:unresolvable2:+ as no versions of com.github.ben-manes:unresolvable2 are available.\r\nSearched in the following locations:\r\n  - file:/C:/Users/Przemek/.gradle/caches/5.6.4/embedded-kotlin-repo-1.3.41-3/repo/com/github/ben-manes/unresolvable2/\r\n  - https://jcenter.bintray.com/com/github/ben-manes/unresolvable2/maven-metadata.xml\r\n  - https://jcenter.bintray.com/com/github/ben-manes/unresolvable2/\r\n  - file:/C:/Users/Przemek/.m2/repository/com/github/ben-manes/unresolvable2/maven-metadata.xml\r\n  - file:/C:/Users/Przemek/.m2/repository/com/github/ben-manes/unresolvable2/\r\nRequired by:\r\n    project :\r\n",
+                "projectUrl": null,
+                "name": "unresolvable2"
+            }
+        ],
+        "count": 2
+    },
+    "count": 20
+}

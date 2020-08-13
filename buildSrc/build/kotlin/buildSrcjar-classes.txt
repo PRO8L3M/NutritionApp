@@ -1,0 +1,1 @@
+C:\Users\Przemek\StudioProjects\nutritionApp\buildSrc\build\classes\kotlin\main\Libraries.class;C:\Users\Przemek\StudioProjects\nutritionApp\buildSrc\build\classes\kotlin\main\Versions.class

@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.github.ben-manes.versions"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.nutrition"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "https://api.spoonacular.com/"
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+// to check libraries latest versions: `gradlew -p app dependencyUpdates`
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath Libraries.gradleVersionPlugin
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Libraries.kotlin
+
+    implementation Libraries.androidxAppCompat
+    implementation Libraries.androidxCoreKtx
+    implementation Libraries.androidxConstraintLayout
+
+    implementation Libraries.koinAndroid
+    implementation Libraries.koinAndroidxFragment
+    implementation Libraries.koinAndroidxScope
+    implementation Libraries.koinAndroidxViewModel
+
+    implementation Libraries.material
+
+    implementation Libraries.leakCanary
+
+    implementation Libraries.timber
+
+    implementation Libraries.androidxLegacy
+
+    implementation Libraries.viewModelScopeKtx
+    implementation Libraries.lifecycleScopeKtx
+    implementation Libraries.liveDataKtx
+
+    implementation Libraries.navigationFragmentKtx
+    implementation Libraries.navigationKtx
+
+    testImplementation Libraries.junit
+    androidTestImplementation Libraries.androidxJunit
+    androidTestImplementation Libraries.androidxEspresso
+}
