@@ -1,7 +1,7 @@
 @file:Suppress("MayBeConstant")
 
 object Versions {
-    val kotlin = "1.3.72"
+    val kotlin = "1.4.0"
     val buildGradle = "4.0.1"
 
     val appCompat = "1.1.0"
@@ -16,7 +16,7 @@ object Versions {
 
     val coroutines = "1.3.5"
 
-    val material = "1.1.0"
+    val material = "1.3.0-alpha02"
 
     val leakCanary = "2.0"
 

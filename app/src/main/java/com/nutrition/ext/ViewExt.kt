@@ -14,12 +14,21 @@ fun View.hideKeyboard() {
     imm.hideSoftInputFromWindow(windowToken, NO_FLAG)
 }
 
-inline fun <reified T> RecyclerView.Adapter<*>.getAsyncListDiffer(noinline areItemsTheSame: ((oldItem: T, newItem:T) -> Boolean)): AsyncListDiffer<T> {
-    val diffUtilCallback = object: DiffUtil.ItemCallback<T>() {
-        override fun areItemsTheSame(oldItem: T, newItem: T) = areItemsTheSame.invoke(oldItem, newItem)
+inline fun <reified T> RecyclerView.Adapter<*>.getAsyncListDiffer(noinline areItemsTheSame: ((oldItem: T, newItem: T) -> Boolean)): AsyncListDiffer<T> {
+    val diffUtilCallback = object : DiffUtil.ItemCallback<T>() {
+        override fun areItemsTheSame(oldItem: T, newItem: T) =
+            areItemsTheSame.invoke(oldItem, newItem)
 
         @SuppressLint("DiffUtilEquals")
         override fun areContentsTheSame(oldItem: T, newItem: T) = oldItem == newItem
     }
     return AsyncListDiffer(this, diffUtilCallback)
 }
+
+inline fun <T> getDiffUtilCallback(crossinline areItemsTheSame: ((oldItem: T, newItem: T) -> Boolean)) =
+    object : DiffUtil.ItemCallback<T>() {
+        override fun areItemsTheSame(oldItem: T, newItem: T) = areItemsTheSame(oldItem, newItem)
+
+        @SuppressLint("DiffUtilEquals")
+        override fun areContentsTheSame(oldItem: T, newItem: T) = newItem == oldItem
+    }

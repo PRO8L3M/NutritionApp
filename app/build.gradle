@@ -7,6 +7,15 @@ android {
     compileSdkVersion 30
     buildToolsVersion "29.0.2"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     defaultConfig {
         applicationId "com.nutrition"
         minSdkVersion 23
@@ -19,7 +28,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", "https://api.spoonacular.com/"
+          //  buildConfigField "String", "BASE_URL", "https://api.spoonacular.com/"
         }
 
         release {
