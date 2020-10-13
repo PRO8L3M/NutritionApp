@@ -3,11 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/hubFragment">
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.nutrition.ui.start.StartFragment"
+        android:name="com.nutrition.ui.exoplayer.ExoPlayerFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" />
+
+    <fragment
+        android:id="@+id/hubFragment"
+        android:name="com.nutrition.ui.hub.HubFragment"
+        android:label="HubFragment" >
+        <action
+            android:id="@+id/action_hubFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_hubFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_hubFragment_to_wheelPickerFragment"
+            app:destination="@id/wheelPickerFragment" />
+        <action
+            android:id="@+id/action_hubFragment_to_customUiComponentsFragment"
+            app:destination="@id/customUiComponentsFragment" />
+        <action
+            android:id="@+id/action_hubFragment_to_pictureStatusBarFragment"
+            app:destination="@id/pictureStatusBarFragment" />
+        <action
+            android:id="@+id/action_hubFragment_to_swipeRemovingViewHolderItemFragment"
+            app:destination="@id/swipeRemovingViewHolderItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.nutrition.ui.horizontalRecycler.ViewPagerFragment"
+        android:label="ViewPagerFragment" />
+    <fragment
+        android:id="@+id/wheelPickerFragment"
+        android:name="com.nutrition.ui.wheelPicker.WheelPickerFragment"
+        android:label="WheelPickerFragment" />
+    <fragment
+        android:id="@+id/customUiComponentsFragment"
+        android:name="com.nutrition.ui.customUi.CustomUiComponentsFragment"
+        android:label="CustomUiComponentsFragment" />
+    <fragment
+        android:id="@+id/pictureStatusBarFragment"
+        android:name="com.nutrition.ui.imagefromtop.PictureStatusBarFragment"
+        android:label="PictureStatusBarFragment" />
+    <fragment
+        android:id="@+id/swipeRemovingViewHolderItemFragment"
+        android:name="com.nutrition.ui.swipeRecyclerView.SwipeRemovingViewHolderItemFragment"
+        android:label="SwipeRemovingViewHolderItemFragment" />
 </navigation>

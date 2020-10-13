@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "com.github.ben-manes.versions"
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -36,6 +37,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 // to check libraries latest versions: `gradlew -p app dependencyUpdates`
@@ -50,6 +55,7 @@ buildscript {
 }
 
 dependencies {
+    lintChecks project(path: ':rules')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation Libraries.kotlin
 
@@ -77,7 +83,16 @@ dependencies {
     implementation Libraries.navigationFragmentKtx
     implementation Libraries.navigationKtx
 
+    implementation Libraries.exoplayer
+
+    implementation Libraries.coil
+
     testImplementation Libraries.junit
     androidTestImplementation Libraries.androidxJunit
     androidTestImplementation Libraries.androidxEspresso
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

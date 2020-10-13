@@ -4,34 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.start.StartFragment">
+    tools:context=".ui.exoplayer.ExoPlayerFragment">
 
-    <com.nutrition.common.customs.CustomInputField
-        android:id="@+id/custom_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/validate_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
-        android:text="VALIDATE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom_input" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/clear_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:text="CLEAR"
-        app:layout_constraintStart_toEndOf="@+id/validate_btn"
-        app:layout_constraintTop_toBottomOf="@+id/custom_input" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_subtitle_button="true"
+        app:controller_layout_id="@layout/custom_exo_styled_player_control_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.nutrition.ui.start
+package com.nutrition.ui.exoplayer
 
 import androidx.lifecycle.ViewModel
 import com.nutrition.data.repository.Repository

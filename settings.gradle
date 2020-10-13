@@ -1,2 +1,3 @@
+include ':rules'
 rootProject.name='nutrition'
 include ':app'

@@ -1,7 +1,7 @@
 package com.nutrition.di
 
 import com.nutrition.data.repository.Repository
-import com.nutrition.ui.start.StartViewModel
+import com.nutrition.ui.exoplayer.StartViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module

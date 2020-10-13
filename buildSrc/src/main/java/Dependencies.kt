@@ -29,6 +29,10 @@ object Versions {
     val navigation = "2.3.0-alpha01"
 
     val gradleVersionsPlugin = "0.28.0"
+
+    val exoplayer = "2.12.0"
+
+    val coil = "1.0.0-rc3"
 }
 
 object Libraries {
@@ -58,11 +62,15 @@ object Libraries {
     val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     val navigationKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
+    val exoplayer = "com.google.android.exoplayer:exoplayer:${Versions.exoplayer}"
+
     val material = "com.google.android.material:material:${Versions.material}"
 
     val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
 
     val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+
+    val coil = "io.coil-kt:coil:${Versions.coil}"
 
     val gradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersionsPlugin}"
 }

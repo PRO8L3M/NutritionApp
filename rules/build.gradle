@@ -1,0 +1,31 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+}
+
+jar {
+    manifest {
+        attributes("Lint-Registry": "com.example.rules.IssueRegistry")
+    }
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'compileDebugSources' ||
+            task.name == 'compileReleaseSources') {
+        task.dependsOn lint
+        task.mustRunAfter lint
+    }
+}
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jdk8-1.3.72"
+    compileOnly "com.android.tools.lint:lint-api:27.0.1"
+    compileOnly "com.android.tools.lint:lint-checks:27.0.1"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

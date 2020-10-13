@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffb2">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exoplayerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXOPLAYER"
+        app:layout_constraintBottom_toTopOf="@+id/viewpagerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewpagerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEWPAGER"
+        app:layout_constraintBottom_toTopOf="@+id/wheelPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exoplayerBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wheelPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WHEEL PICKER"
+        app:layout_constraintBottom_toTopOf="@+id/customComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewpagerBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/customComponents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CUSTOM UI"
+        app:layout_constraintBottom_toTopOf="@+id/statusBarPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheelPicker" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/statusBarPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS BAR PICTURE"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRemoving"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customComponents" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/swipeRemoving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SWIPE REMOVING"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusBarPic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

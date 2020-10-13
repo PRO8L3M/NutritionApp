@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:targetApi="28">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <ImageButton
+            android:id="@id/exo_prev"
+            style="@style/ExoMediaButton.Previous" /> -->
+
+        <ImageButton
+            android:id="@id/exo_rew"
+            style="@style/ExoMediaButton.Rewind"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/exoplayer_controller_button_rounded_background" />
+
+       <!-- <ImageButton
+            android:id="@id/exo_shuffle"
+            style="@style/ExoMediaButton" />-->
+
+        <!--<ImageButton
+            android:id="@id/exo_repeat_toggle"
+            style="@style/ExoMediaButton" />-->
+
+        <ImageButton
+            android:id="@id/exo_play"
+            android:background="@drawable/exoplayer_controller_button_rounded_background"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            style="@style/ExoMediaButton.Play" />
+
+        <ImageButton
+            android:id="@id/exo_pause"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:background="@drawable/exoplayer_controller_button_rounded_background"
+            style="@style/ExoMediaButton.Pause" />
+
+        <ImageButton
+            android:id="@id/exo_ffwd"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/exoplayer_controller_button_rounded_background"
+            style="@style/ExoMediaButton.FastForward" />
+
+        <!--<ImageButton
+            android:id="@id/exo_next"
+            style="@style/ExoMediaButton.Next" />
+
+        <ImageButton
+            android:id="@id/exo_vr"
+            style="@style/ExoMediaButton.VR" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/exoplayer_controller_background"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="#FFBEBEBE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="0:00" />
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@+id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            app:played_color="#FA7268" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="#FFBEBEBE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="2:10" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
